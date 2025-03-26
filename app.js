@@ -51,7 +51,7 @@ app.post("/login", (req, res) => {
         return res.render("error", { mensagem: "Preencha todos os campos" });
     }
     
-    const query = "SELECT senha FROM DZ_usuarios WHERE email = ?";
+    const query = "SELECT senha FROM GU_usuarios WHERE email = ?";
     db.query(query, [email], (err, results) => {
         if (err) {
             console.error("Erro na consulta: ", err);
@@ -76,7 +76,7 @@ app.post('/cadastrar', async (req, res) => {
     console.log(req.body)
     const { nome, email, senha } = req.body
 
-    const sql = "insert into DZ_usuarios (nome, email, senha, criado_em) values (? , ? , ?, ?)"
+    const sql = "insert into GU_usuarios (nome, email, senha, criado_em) values (? , ? , ?, ?)"
 
     const [rows] = await connection.execute(sql, [nome, email, senha, new Date()])
 
