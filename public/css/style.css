@@ -1,0 +1,46 @@
+body {
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: rgb(206, 163, 255);
+    background: linear-gradient(90deg, rgb(206, 163, 255) 32%, rgba(196, 145, 255) 64%);
+}
+
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Texto branco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para melhor visibilidade */
+}
+
+.box-area {
+    width: 100%;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.right-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
